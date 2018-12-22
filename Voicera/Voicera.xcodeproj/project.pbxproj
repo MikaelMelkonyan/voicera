@@ -12,6 +12,19 @@
 		21C1340A21CE7A8C0067CE7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1340821CE7A8C0067CE7E /* LaunchScreen.storyboard */; };
 		21C1341A21CE82E50067CE7E /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1341921CE82E50067CE7E /* Events.storyboard */; };
 		21C1341C21CE82EE0067CE7E /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1341B21CE82EE0067CE7E /* EventsViewController.swift */; };
+		21C1342621CE876F0067CE7E /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C1342121CE876E0067CE7E /* Poppins-Light.ttf */; };
+		21C1342721CE876F0067CE7E /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C1342221CE876F0067CE7E /* Poppins-Medium.ttf */; };
+		21C1342821CE876F0067CE7E /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C1342321CE876F0067CE7E /* Poppins-SemiBold.ttf */; };
+		21C1342921CE876F0067CE7E /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C1342421CE876F0067CE7E /* Poppins-Bold.ttf */; };
+		21C1342A21CE876F0067CE7E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C1342521CE876F0067CE7E /* Poppins-Regular.ttf */; };
+		21C1342F21CE917F0067CE7E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1342E21CE917F0067CE7E /* UIFont.swift */; };
+		21C1343221CE96270067CE7E /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343121CE96270067CE7E /* EventsViewModel.swift */; };
+		21C1343521CE96FB0067CE7E /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343421CE96FB0067CE7E /* EventManager.swift */; };
+		21C1343721CE98490067CE7E /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343621CE98490067CE7E /* Thread.swift */; };
+		21C1343C21CE9DF70067CE7E /* VoiceraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343B21CE9DF70067CE7E /* VoiceraButton.swift */; };
+		21C1343E21CE9E4A0067CE7E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343D21CE9E4A0067CE7E /* UIColor.swift */; };
+		21C1344021CEA04B0067CE7E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343F21CEA04B0067CE7E /* UIView.swift */; };
+		21C1344621CEB3010067CE7E /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1344521CEB3010067CE7E /* Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +35,19 @@
 		21C1340B21CE7A8C0067CE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21C1341921CE82E50067CE7E /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		21C1341B21CE82EE0067CE7E /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		21C1342121CE876E0067CE7E /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		21C1342221CE876F0067CE7E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		21C1342321CE876F0067CE7E /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		21C1342421CE876F0067CE7E /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		21C1342521CE876F0067CE7E /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		21C1342E21CE917F0067CE7E /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		21C1343121CE96270067CE7E /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		21C1343421CE96FB0067CE7E /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		21C1343621CE98490067CE7E /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		21C1343B21CE9DF70067CE7E /* VoiceraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceraButton.swift; sourceTree = "<group>"; };
+		21C1343D21CE9E4A0067CE7E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		21C1343F21CEA04B0067CE7E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		21C1344521CEB3010067CE7E /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,7 @@
 				21C1340621CE7A8C0067CE7E /* Assets.xcassets */,
 				21C1340B21CE7A8C0067CE7E /* Info.plist */,
 				21C1340821CE7A8C0067CE7E /* LaunchScreen.storyboard */,
+				21C1341E21CE87130067CE7E /* Resources */,
 				21C1341221CE7BE00067CE7E /* Code */,
 			);
 			path = Voicera;
@@ -67,7 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				21C1341D21CE83E80067CE7E /* Common */,
+				21C1344121CEAF990067CE7E /* Domain */,
 				21C1341521CE80760067CE7E /* Controllers */,
+				21C1343021CE960D0067CE7E /* View models */,
 				21C1341621CE80880067CE7E /* Views */,
 			);
 			path = Code;
@@ -84,6 +113,7 @@
 		21C1341621CE80880067CE7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				21C1343A21CE9DD40067CE7E /* Buttons */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,8 +130,81 @@
 		21C1341D21CE83E80067CE7E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				21C1343621CE98490067CE7E /* Thread.swift */,
+				21C1343421CE96FB0067CE7E /* EventManager.swift */,
+				21C1342D21CE916F0067CE7E /* Extensions */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		21C1341E21CE87130067CE7E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				21C1341F21CE87210067CE7E /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		21C1341F21CE87210067CE7E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				21C1342021CE87270067CE7E /* Poppins */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		21C1342021CE87270067CE7E /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				21C1342121CE876E0067CE7E /* Poppins-Light.ttf */,
+				21C1342221CE876F0067CE7E /* Poppins-Medium.ttf */,
+				21C1342521CE876F0067CE7E /* Poppins-Regular.ttf */,
+				21C1342321CE876F0067CE7E /* Poppins-SemiBold.ttf */,
+				21C1342421CE876F0067CE7E /* Poppins-Bold.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+		21C1342D21CE916F0067CE7E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21C1342E21CE917F0067CE7E /* UIFont.swift */,
+				21C1343D21CE9E4A0067CE7E /* UIColor.swift */,
+				21C1343F21CEA04B0067CE7E /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		21C1343021CE960D0067CE7E /* View models */ = {
+			isa = PBXGroup;
+			children = (
+				21C1343121CE96270067CE7E /* EventsViewModel.swift */,
+			);
+			path = "View models";
+			sourceTree = "<group>";
+		};
+		21C1343A21CE9DD40067CE7E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				21C1343B21CE9DF70067CE7E /* VoiceraButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		21C1344121CEAF990067CE7E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				21C1344221CEAFA30067CE7E /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		21C1344221CEAFA30067CE7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				21C1344521CEB3010067CE7E /* Events.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +267,12 @@
 			files = (
 				21C1340A21CE7A8C0067CE7E /* LaunchScreen.storyboard in Resources */,
 				21C1340721CE7A8C0067CE7E /* Assets.xcassets in Resources */,
+				21C1342921CE876F0067CE7E /* Poppins-Bold.ttf in Resources */,
 				21C1341A21CE82E50067CE7E /* Events.storyboard in Resources */,
+				21C1342821CE876F0067CE7E /* Poppins-SemiBold.ttf in Resources */,
+				21C1342621CE876F0067CE7E /* Poppins-Light.ttf in Resources */,
+				21C1342721CE876F0067CE7E /* Poppins-Medium.ttf in Resources */,
+				21C1342A21CE876F0067CE7E /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C1343E21CE9E4A0067CE7E /* UIColor.swift in Sources */,
+				21C1343521CE96FB0067CE7E /* EventManager.swift in Sources */,
+				21C1343721CE98490067CE7E /* Thread.swift in Sources */,
 				21C1341C21CE82EE0067CE7E /* EventsViewController.swift in Sources */,
+				21C1344621CEB3010067CE7E /* Events.swift in Sources */,
+				21C1343221CE96270067CE7E /* EventsViewModel.swift in Sources */,
 				21C1340021CE7A8A0067CE7E /* AppDelegate.swift in Sources */,
+				21C1343C21CE9DF70067CE7E /* VoiceraButton.swift in Sources */,
+				21C1344021CEA04B0067CE7E /* UIView.swift in Sources */,
+				21C1342F21CE917F0067CE7E /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
