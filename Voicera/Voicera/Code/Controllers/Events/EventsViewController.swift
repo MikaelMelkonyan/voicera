@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit.EKEvent
 
 class EventsViewController: UIViewController {
     
@@ -94,7 +95,15 @@ class EventsViewController: UIViewController {
     
     @objc private func openEventCretaing() {
         let vc = AppStoryboard.AddEvent.instance.instantiateViewController(withIdentifier: AddEventViewController.storyboardID) as! AddEventViewController
-        navigationController?.pushViewController(vc, animated: true)
+        vc.successCompletion = { [weak self] in
+            self?.insertNewEvent($0)
+        }
+        let nv = UINavigationController(rootViewController: vc)
+        present(nv, animated: true, completion: nil)
+    }
+    
+    private func insertNewEvent(_ event: EKEvent) {
+        viewModel.insert(newEvent: event)
     }
 }
 
@@ -151,17 +160,7 @@ extension EventsViewController {
     private func setupNavigationBar() {
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        
-        guard let navigationBar = navigationController?.navigationBar else {
-            return
-        }
-        navigationBar.tintColor = .black
-        navigationBar.prefersLargeTitles = true
-        navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationBar.shadowImage = UIImage()
-        navigationBar.titleTextAttributes = [.font: UIFont.poppins(size: 17, weight: .medium)]
-        navigationBar.largeTitleTextAttributes = [.font: UIFont.poppins(size: 32, weight: .semiBold)]
-        navigationBar.isTranslucent = true
+        navigationController?.navigationBar.configureWithVoiceaStyle()
     }
     
     private func setupTableView() {

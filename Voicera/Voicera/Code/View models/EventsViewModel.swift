@@ -6,6 +6,8 @@
 //  Copyright © 2018 Mikael-Melkonyan. All rights reserved.
 //
 
+import EventKit.EKEvent
+
 class EventsViewModel {
     
     private let updateView: (() -> ())
@@ -48,6 +50,17 @@ extension EventsViewModel {
             }
         }
     }
+    
+    func insert(newEvent event: EKEvent) {
+        guard case let .success(state) = state, case let .events(events) = state else {
+            checkPermissions()
+            return
+        }
+        var new = events
+        new.insert(event, at: 0)
+        new.sort { $0.startDate > $1.startDate }
+        self.state = .success(.events(new))
+    }
 }
 
 extension EventsViewModel {
@@ -55,10 +68,11 @@ extension EventsViewModel {
     private func loadEvents() {
         background {
             do {
-                let events = try EventManager.shared.loadEvents()
+                var events = try EventManager.shared.loadEvents()
                 if events.isEmpty {
                     self.state = .success(.empty)
                 } else {
+                    events.sort { $0.startDate > $1.startDate }
                     self.state = .success(.events(events))
                 }
             } catch {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21545BBF21CFDA6300CC0892 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21545BBE21CFDA6300CC0892 /* UIDevice.swift */; };
+		21545BC121CFF0A400CC0892 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21545BC021CFF0A400CC0892 /* UIViewController.swift */; };
 		21C1340021CE7A8A0067CE7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C133FF21CE7A8A0067CE7E /* AppDelegate.swift */; };
 		21C1340721CE7A8C0067CE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C1340621CE7A8C0067CE7E /* Assets.xcassets */; };
 		21C1340A21CE7A8C0067CE7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1340821CE7A8C0067CE7E /* LaunchScreen.storyboard */; };
@@ -37,9 +39,12 @@
 		21C1345F21CFB6070067CE7E /* AddEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1345E21CFB6070067CE7E /* AddEvent.storyboard */; };
 		21C1346121CFB6640067CE7E /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1346021CFB6640067CE7E /* AppStoryboard.swift */; };
 		21C1346421CFB93B0067CE7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1346321CFB93B0067CE7E /* Constants.swift */; };
+		21C1346821CFC6390067CE7E /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1346721CFC6390067CE7E /* UINavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21545BBE21CFDA6300CC0892 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		21545BC021CFF0A400CC0892 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		21C133FC21CE7A8A0067CE7E /* Voicera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voicera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C133FF21CE7A8A0067CE7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C1340621CE7A8C0067CE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +77,7 @@
 		21C1345E21CFB6070067CE7E /* AddEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddEvent.storyboard; sourceTree = "<group>"; };
 		21C1346021CFB6640067CE7E /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		21C1346321CFB93B0067CE7E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		21C1346721CFC6390067CE7E /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +165,8 @@
 			children = (
 				21C1343621CE98490067CE7E /* Thread.swift */,
 				21C1343421CE96FB0067CE7E /* EventManager.swift */,
-				21C1342D21CE916F0067CE7E /* Extensions */,
 				21C1346021CFB6640067CE7E /* AppStoryboard.swift */,
+				21C1342D21CE916F0067CE7E /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -199,6 +205,9 @@
 				21C1342E21CE917F0067CE7E /* UIFont.swift */,
 				21C1343D21CE9E4A0067CE7E /* UIColor.swift */,
 				21C1343F21CEA04B0067CE7E /* UIView.swift */,
+				21C1346721CFC6390067CE7E /* UINavigationBar.swift */,
+				21545BBE21CFDA6300CC0892 /* UIDevice.swift */,
+				21545BC021CFF0A400CC0892 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -241,8 +250,7 @@
 				21C1345721CF9C430067CE7E /* SimpleCell.swift */,
 				21C1345921CFB0290067CE7E /* PressableCell.swift */,
 				21C1345221CF98130067CE7E /* Error information */,
-				21C1344821CF964C0067CE7E /* Event */,
-				21C1344D21CF96AE0067CE7E /* Add event */,
+				21C1346D21CFD5D60067CE7E /* Events list */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -289,6 +297,15 @@
 				21C1346321CFB93B0067CE7E /* Constants.swift */,
 			);
 			path = Defines;
+			sourceTree = "<group>";
+		};
+		21C1346D21CFD5D60067CE7E /* Events list */ = {
+			isa = PBXGroup;
+			children = (
+				21C1344821CF964C0067CE7E /* Event */,
+				21C1344D21CF96AE0067CE7E /* Add event */,
+			);
+			path = "Events list";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,7 +400,10 @@
 				21C1343221CE96270067CE7E /* EventsViewModel.swift in Sources */,
 				21C1344B21CF96630067CE7E /* EventCell.swift in Sources */,
 				21C1340021CE7A8A0067CE7E /* AppDelegate.swift in Sources */,
+				21545BBF21CFDA6300CC0892 /* UIDevice.swift in Sources */,
 				21C1343C21CE9DF70067CE7E /* VoiceraButton.swift in Sources */,
+				21545BC121CFF0A400CC0892 /* UIViewController.swift in Sources */,
+				21C1346821CFC6390067CE7E /* UINavigationBar.swift in Sources */,
 				21C1345A21CFB0290067CE7E /* PressableCell.swift in Sources */,
 				21C1344021CEA04B0067CE7E /* UIView.swift in Sources */,
 				21C1342F21CE917F0067CE7E /* UIFont.swift in Sources */,
