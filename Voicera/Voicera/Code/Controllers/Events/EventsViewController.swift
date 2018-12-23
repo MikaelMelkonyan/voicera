@@ -21,9 +21,7 @@ class EventsViewController: UIViewController {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
-    private lazy var viewModel = EventsViewModel { [weak self] in
-        self?.view.setNeedsLayout()
-    }
+    private lazy var viewModel = EventsViewModel(view: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,6 +105,17 @@ class EventsViewController: UIViewController {
     }
 }
 
+extension EventsViewController: EventsView {
+    
+    func updateView() {
+        view.setNeedsLayout()
+    }
+    
+    func showAlert(title: String, message: String) {
+        super.showAlert(message, title: title, completion: nil)
+    }
+}
+
 extension EventsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -142,7 +151,10 @@ extension EventsViewController: UITableViewDataSource {
             return cell
         case let .events(events):
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
-            cell.fill(event: events[indexPath.row])
+            let (event, isReminderSet) = events[indexPath.row]
+            cell.fill(event: event, isReminderSet: isReminderSet) { [weak self] isReminderNeedSet, event in
+                isReminderNeedSet ? self?.viewModel.setReminder(for: event) : self?.viewModel.cancelReminder(for: event)
+            }
             return cell
         }
     }

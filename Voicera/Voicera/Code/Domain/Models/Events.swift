@@ -21,7 +21,7 @@ extension EventsViewModel {
         }
         
         enum SuccessState {
-            case events([EKEvent])
+            case events([(event: EKEvent, isReminderActive: Bool)])
             case empty
             case error(String)
         }

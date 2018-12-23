@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVj-w6-cUX">
-                                        <rect key="frame" x="24" y="163.5" width="327" height="176"/>
+                                        <rect key="frame" x="24" y="171" width="327" height="161"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXw-kN-7fF">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="45"/>
@@ -45,9 +45,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2p4-61-C8N" customClass="VoiceraButton" customModule="Voicera" customModuleProvider="target">
-                                                <rect key="frame" x="140.5" y="116" width="46" height="60"/>
+                                                <rect key="frame" x="140.5" y="116" width="46" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="h3T-dK-BLy"/>
+                                                    <constraint firstAttribute="height" constant="45" id="h3T-dK-BLy"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Button"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2131269321D0053D0067322C /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2131269221D0053D0067322C /* NotificationsManager.swift */; };
+		2131269621D018DA0067322C /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2131269521D018DA0067322C /* EventsView.swift */; };
 		21545BBF21CFDA6300CC0892 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21545BBE21CFDA6300CC0892 /* UIDevice.swift */; };
 		21545BC121CFF0A400CC0892 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21545BC021CFF0A400CC0892 /* UIViewController.swift */; };
 		21C1340021CE7A8A0067CE7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C133FF21CE7A8A0067CE7E /* AppDelegate.swift */; };
@@ -21,7 +23,7 @@
 		21C1342A21CE876F0067CE7E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C1342521CE876F0067CE7E /* Poppins-Regular.ttf */; };
 		21C1342F21CE917F0067CE7E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1342E21CE917F0067CE7E /* UIFont.swift */; };
 		21C1343221CE96270067CE7E /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343121CE96270067CE7E /* EventsViewModel.swift */; };
-		21C1343521CE96FB0067CE7E /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343421CE96FB0067CE7E /* EventManager.swift */; };
+		21C1343521CE96FB0067CE7E /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343421CE96FB0067CE7E /* EventsManager.swift */; };
 		21C1343721CE98490067CE7E /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343621CE98490067CE7E /* Thread.swift */; };
 		21C1343C21CE9DF70067CE7E /* VoiceraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343B21CE9DF70067CE7E /* VoiceraButton.swift */; };
 		21C1343E21CE9E4A0067CE7E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343D21CE9E4A0067CE7E /* UIColor.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2131269221D0053D0067322C /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		2131269521D018DA0067322C /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		21545BBE21CFDA6300CC0892 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		21545BC021CFF0A400CC0892 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		21C133FC21CE7A8A0067CE7E /* Voicera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voicera.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +63,7 @@
 		21C1342521CE876F0067CE7E /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		21C1342E21CE917F0067CE7E /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		21C1343121CE96270067CE7E /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
-		21C1343421CE96FB0067CE7E /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		21C1343421CE96FB0067CE7E /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		21C1343621CE98490067CE7E /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		21C1343B21CE9DF70067CE7E /* VoiceraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceraButton.swift; sourceTree = "<group>"; };
 		21C1343D21CE9E4A0067CE7E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -91,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2131269421D018C80067322C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2131269521D018DA0067322C /* EventsView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		21C133F321CE7A8A0067CE7E = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				21C1341D21CE83E80067CE7E /* Common */,
+				2131269421D018C80067322C /* Protocols */,
 				21C1346221CFB92B0067CE7E /* Defines */,
 				21C1344121CEAF990067CE7E /* Domain */,
 				21C1341521CE80760067CE7E /* Controllers */,
@@ -164,8 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				21C1343621CE98490067CE7E /* Thread.swift */,
-				21C1343421CE96FB0067CE7E /* EventManager.swift */,
+				21C1343421CE96FB0067CE7E /* EventsManager.swift */,
 				21C1346021CFB6640067CE7E /* AppStoryboard.swift */,
+				2131269221D0053D0067322C /* NotificationsManager.swift */,
 				21C1342D21CE916F0067CE7E /* Extensions */,
 			);
 			path = Common;
@@ -390,8 +404,10 @@
 			files = (
 				21C1345021CF96D60067CE7E /* AddEventCell.swift in Sources */,
 				21C1345D21CFB5DD0067CE7E /* AddEventViewController.swift in Sources */,
+				2131269621D018DA0067322C /* EventsView.swift in Sources */,
 				21C1343E21CE9E4A0067CE7E /* UIColor.swift in Sources */,
-				21C1343521CE96FB0067CE7E /* EventManager.swift in Sources */,
+				21C1343521CE96FB0067CE7E /* EventsManager.swift in Sources */,
+				2131269321D0053D0067322C /* NotificationsManager.swift in Sources */,
 				21C1345821CF9C430067CE7E /* SimpleCell.swift in Sources */,
 				21C1343721CE98490067CE7E /* Thread.swift in Sources */,
 				21C1346121CFB6640067CE7E /* AppStoryboard.swift in Sources */,

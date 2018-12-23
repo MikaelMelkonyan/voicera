@@ -9,7 +9,7 @@
 import UIKit
 import EventKit.EKEvent
 
-class EventCell: SimpleCell {
+class EventCell: PressableCell {
     
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var backView: UIView!
@@ -19,8 +19,11 @@ class EventCell: SimpleCell {
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var notesLabel: UILabel!
-    @IBOutlet weak var titleToBackView: NSLayoutConstraint!
-    @IBOutlet weak var titleToNotes: NSLayoutConstraint!
+    @IBOutlet weak var reminderButton: VoiceraButton!
+    
+    private var event: EKEvent?
+    private var isReminderSet: Bool?
+    private var reminderAction: ((Bool, EKEvent) -> ())?
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -30,22 +33,26 @@ class EventCell: SimpleCell {
         dateView.crop(radius: kCropRadius / 2)
     }
     
-    func fill(event: EKEvent) {
+    func fill(event: EKEvent, isReminderSet: Bool, reminder: @escaping ((Bool, EKEvent) -> ())) {
+        self.event = event
+        self.isReminderSet = isReminderSet
         titleLabel.text = event.title
         
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM d, yyyy h:mm a"
         dateLabel.text = formatter.string(from: event.startDate)
         
-        if let notes = event.notes, !notes.isEmpty {
-            notesLabel.text = notes
-            titleToNotes.priority = .defaultHigh
-            titleToBackView.priority = .defaultLow
-        } else {
-            notesLabel.text = nil
-            titleToNotes.priority = .defaultLow
-            titleToBackView.priority = .defaultHigh
+        notesLabel.text = event.notes
+        reminderButton.setTitle(isReminderSet ? "Cancel" : "Set" + " reminder", for: .normal)
+        reminderAction = reminder
+        
+        reminderButton.isHidden = event.startDate <= Date()
+    }
+    
+    @IBAction func changeReminder(_ sender: VoiceraButton) {
+        guard let event = event, let isReminderSet = isReminderSet else {
+            return
         }
-        layoutIfNeeded()
+        reminderAction?(!isReminderSet, event) // todo
     }
 }

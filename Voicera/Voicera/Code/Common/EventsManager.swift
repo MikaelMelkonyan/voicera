@@ -1,5 +1,5 @@
 //
-//  EventManager.swift
+//  EventsManager.swift
 //  Voicera
 //
 //  Created by Mikael on 12/22/18.
@@ -8,10 +8,10 @@
 
 import EventKit
 
-class EventManager {
+class EventsManager {
     
     private init() {}
-    static let shared = EventManager()
+    static let shared = EventsManager()
     
     private let eventStore = EKEventStore()
     

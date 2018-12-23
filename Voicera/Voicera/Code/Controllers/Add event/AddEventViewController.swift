@@ -38,7 +38,7 @@ class AddEventViewController: UIViewController {
         }
         
         do {
-            let event = try EventManager.shared.createEvent(with: title, date: datePicker.date, notes: notesTextView.text)
+            let event = try EventsManager.shared.createEvent(with: title, date: datePicker.date, notes: notesTextView.text)
             dismiss(animated: true) { [weak self] in
                 self?.successCompletion?(event)
             }

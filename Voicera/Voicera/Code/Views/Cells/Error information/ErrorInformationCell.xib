@@ -62,9 +62,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihb-7g-HtK" customClass="VoiceraButton" customModule="Voicera" customModuleProvider="target">
-                        <rect key="frame" x="128.5" y="191" width="63" height="60"/>
+                        <rect key="frame" x="128.5" y="191" width="63" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="meh-tf-0fF"/>
+                            <constraint firstAttribute="height" constant="45" id="meh-tf-0fF"/>
                         </constraints>
                         <state key="normal" title="Try again"/>
                         <connections>
