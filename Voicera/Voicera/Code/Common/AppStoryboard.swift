@@ -10,8 +10,7 @@ import UIKit
 
 enum AppStoryboard: String {
     
-    // Main
-    case AddEvent
+    case AddEvent, EventDetails
     
     var instance: UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)

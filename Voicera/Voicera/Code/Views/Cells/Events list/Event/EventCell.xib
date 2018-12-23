@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Poppins-Light.ttf">
-            <string>Poppins-Light</string>
-        </array>
         <array key="Poppins-Medium.ttf">
             <string>Poppins-Medium</string>
         </array>
@@ -31,20 +28,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtx-1D-xJ7">
-                        <rect key="frame" x="20" y="10" width="280" height="114.5"/>
+                        <rect key="frame" x="20" y="10" width="280" height="94.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgA-si-xzw">
-                        <rect key="frame" x="20" y="10" width="280" height="114.5"/>
+                        <rect key="frame" x="20" y="10" width="280" height="94.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7V-oJ-mCh">
-                                <rect key="frame" x="12" y="10" width="43" height="22.5"/>
+                                <rect key="frame" x="12" y="20" width="43" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJP-s8-Kqi">
-                                <rect key="frame" x="12" y="37.5" width="52" height="27"/>
+                                <rect key="frame" x="12" y="47.5" width="52" height="27"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkl-1I-TRf">
                                         <rect key="frame" x="10" y="5" width="32" height="17"/>
@@ -61,14 +58,8 @@
                                     <constraint firstItem="Fkl-1I-TRf" firstAttribute="top" secondItem="YJP-s8-Kqi" secondAttribute="top" constant="5" id="f4a-bl-hTl"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPJ-s6-8U5">
-                                <rect key="frame" x="12" y="74.5" width="258" height="20"/>
-                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2N-qi-VE9" customClass="VoiceraButton" customModule="Voicera" customModuleProvider="target">
-                                <rect key="frame" x="222" y="10" width="46" height="45"/>
+                                <rect key="frame" x="222" y="20" width="46" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="vaG-tP-EVv"/>
                                 </constraints>
@@ -80,17 +71,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="i7V-oJ-mCh" firstAttribute="top" secondItem="mgA-si-xzw" secondAttribute="top" constant="10" id="00p-lk-Hfc"/>
+                            <constraint firstItem="i7V-oJ-mCh" firstAttribute="top" secondItem="mgA-si-xzw" secondAttribute="top" constant="20" id="00p-lk-Hfc"/>
                             <constraint firstItem="YJP-s8-Kqi" firstAttribute="top" secondItem="i7V-oJ-mCh" secondAttribute="bottom" constant="5" id="0Pf-go-5a5"/>
-                            <constraint firstItem="p2N-qi-VE9" firstAttribute="top" secondItem="mgA-si-xzw" secondAttribute="top" constant="10" id="78z-Ep-6k5"/>
-                            <constraint firstAttribute="bottom" secondItem="sPJ-s6-8U5" secondAttribute="bottom" constant="20" id="Mmu-Yk-5e1"/>
-                            <constraint firstItem="sPJ-s6-8U5" firstAttribute="top" secondItem="YJP-s8-Kqi" secondAttribute="bottom" constant="10" id="QG0-w3-gJZ"/>
+                            <constraint firstItem="p2N-qi-VE9" firstAttribute="top" secondItem="mgA-si-xzw" secondAttribute="top" constant="20" id="78z-Ep-6k5"/>
                             <constraint firstItem="p2N-qi-VE9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i7V-oJ-mCh" secondAttribute="trailing" constant="10" id="YUr-C7-Jgf"/>
-                            <constraint firstAttribute="trailing" secondItem="sPJ-s6-8U5" secondAttribute="trailing" constant="10" id="YZL-JZ-LPA"/>
-                            <constraint firstItem="sPJ-s6-8U5" firstAttribute="leading" secondItem="mgA-si-xzw" secondAttribute="leading" constant="12" id="fD2-lY-WNI"/>
                             <constraint firstItem="i7V-oJ-mCh" firstAttribute="leading" secondItem="mgA-si-xzw" secondAttribute="leading" constant="12" id="j3m-FT-78s"/>
                             <constraint firstAttribute="trailing" secondItem="p2N-qi-VE9" secondAttribute="trailing" constant="12" id="kp0-6i-ldo"/>
                             <constraint firstItem="YJP-s8-Kqi" firstAttribute="leading" secondItem="i7V-oJ-mCh" secondAttribute="leading" id="u7v-19-Jg7"/>
+                            <constraint firstAttribute="bottom" secondItem="YJP-s8-Kqi" secondAttribute="bottom" constant="20" id="uBe-Z1-epL"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -110,7 +98,6 @@
                 <outlet property="backView" destination="mgA-si-xzw" id="MUZ-gD-JH5"/>
                 <outlet property="dateLabel" destination="Fkl-1I-TRf" id="0yZ-Ro-1i8"/>
                 <outlet property="dateView" destination="YJP-s8-Kqi" id="NNr-xf-6xq"/>
-                <outlet property="notesLabel" destination="sPJ-s6-8U5" id="s1h-YB-ezV"/>
                 <outlet property="reminderButton" destination="p2N-qi-VE9" id="Ihn-sw-RoC"/>
                 <outlet property="shadowView" destination="qtx-1D-xJ7" id="HZa-9b-owB"/>
                 <outlet property="titleLabel" destination="i7V-oJ-mCh" id="ChA-QK-b8R"/>

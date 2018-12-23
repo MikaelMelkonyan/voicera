@@ -51,7 +51,7 @@ class EventsViewController: UIViewController {
             tableView.reloadData()
             let addEvent: UIBarButtonItem?
             if case .events = state {
-                addEvent = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openEventCretaing))
+                addEvent = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openEventCreating))
             } else {
                 addEvent = nil
             }
@@ -91,7 +91,7 @@ class EventsViewController: UIViewController {
         }
     }
     
-    @objc private func openEventCretaing() {
+    @objc private func openEventCreating() {
         let vc = AppStoryboard.AddEvent.instance.instantiateViewController(withIdentifier: AddEventViewController.storyboardID) as! AddEventViewController
         vc.successCompletion = { [weak self] in
             self?.insertNewEvent($0)
@@ -102,6 +102,12 @@ class EventsViewController: UIViewController {
     
     private func insertNewEvent(_ event: EKEvent) {
         viewModel.insert(newEvent: event)
+    }
+    
+    private func openEventDetails(_ event: EKEvent) {
+        let vc = AppStoryboard.EventDetails.instance.instantiateViewController(withIdentifier: EventDetailsViewController.storyboardID) as! EventDetailsViewController
+        vc.event = event
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -140,7 +146,7 @@ extension EventsViewController: UITableViewDataSource {
         case .empty:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddEventCell", for: indexPath) as! AddEventCell
             cell.fill { [weak self] in
-                self?.openEventCretaing()
+                self?.openEventCreating()
             }
             return cell
         case let .error(text):
@@ -152,8 +158,10 @@ extension EventsViewController: UITableViewDataSource {
         case let .events(events):
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
             let (event, isReminderSet) = events[indexPath.row]
-            cell.fill(event: event, isReminderSet: isReminderSet) { [weak self] isReminderNeedSet, event in
+            cell.fill(event: event, isReminderSet: isReminderSet, reminder: { [weak self] isReminderNeedSet, event in
                 isReminderNeedSet ? self?.viewModel.setReminder(for: event) : self?.viewModel.cancelReminder(for: event)
+            }) { [weak self] in
+                self?.openEventDetails($0)
             }
             return cell
         }

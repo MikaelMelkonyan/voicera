@@ -18,12 +18,12 @@ class EventCell: PressableCell {
     @IBOutlet weak var dateView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     
-    @IBOutlet weak var notesLabel: UILabel!
     @IBOutlet weak var reminderButton: VoiceraButton!
     
     private var event: EKEvent?
     private var isReminderSet: Bool?
     private var reminderAction: ((Bool, EKEvent) -> ())?
+    private var openEvent: ((EKEvent) -> ())?
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -33,16 +33,16 @@ class EventCell: PressableCell {
         dateView.crop(radius: kCropRadius / 2)
     }
     
-    func fill(event: EKEvent, isReminderSet: Bool, reminder: @escaping ((Bool, EKEvent) -> ())) {
+    func fill(event: EKEvent, isReminderSet: Bool, reminder: @escaping ((Bool, EKEvent) -> ()), openEvent: @escaping ((EKEvent) -> ())) {
         self.event = event
         self.isReminderSet = isReminderSet
+        self.openEvent = openEvent
         titleLabel.text = event.title
         
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM d, yyyy h:mm a"
         dateLabel.text = formatter.string(from: event.startDate)
         
-        notesLabel.text = event.notes
         reminderButton.setTitle(isReminderSet ? "Cancel" : "Set" + " reminder", for: .normal)
         reminderAction = reminder
         
@@ -54,5 +54,13 @@ class EventCell: PressableCell {
             return
         }
         reminderAction?(!isReminderSet, event) // todo
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        guard let event = self.event else {
+            return
+        }
+        openEvent?(event)
     }
 }

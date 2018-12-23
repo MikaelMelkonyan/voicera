@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2131269321D0053D0067322C /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2131269221D0053D0067322C /* NotificationsManager.swift */; };
 		2131269621D018DA0067322C /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2131269521D018DA0067322C /* EventsView.swift */; };
+		2131269921D035A60067322C /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2131269821D035A60067322C /* EventDetailsViewController.swift */; };
+		2131269B21D035D30067322C /* EventDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2131269A21D035D30067322C /* EventDetails.storyboard */; };
 		21545BBF21CFDA6300CC0892 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21545BBE21CFDA6300CC0892 /* UIDevice.swift */; };
 		21545BC121CFF0A400CC0892 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21545BC021CFF0A400CC0892 /* UIViewController.swift */; };
 		21C1340021CE7A8A0067CE7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C133FF21CE7A8A0067CE7E /* AppDelegate.swift */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		2131269221D0053D0067322C /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		2131269521D018DA0067322C /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		2131269821D035A60067322C /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		2131269A21D035D30067322C /* EventDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventDetails.storyboard; sourceTree = "<group>"; };
 		21545BBE21CFDA6300CC0892 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		21545BC021CFF0A400CC0892 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		21C133FC21CE7A8A0067CE7E /* Voicera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voicera.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		2131269721D035840067322C /* Event details */ = {
+			isa = PBXGroup;
+			children = (
+				2131269821D035A60067322C /* EventDetailsViewController.swift */,
+				2131269A21D035D30067322C /* EventDetails.storyboard */,
+			);
+			path = "Event details";
+			sourceTree = "<group>";
+		};
 		21C133F321CE7A8A0067CE7E = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +164,7 @@
 			children = (
 				21C1341821CE82A00067CE7E /* Events */,
 				21C1345B21CFB5B50067CE7E /* Add event */,
+				2131269721D035840067322C /* Event details */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -383,6 +397,7 @@
 				21C1340A21CE7A8C0067CE7E /* LaunchScreen.storyboard in Resources */,
 				21C1345F21CFB6070067CE7E /* AddEvent.storyboard in Resources */,
 				21C1340721CE7A8C0067CE7E /* Assets.xcassets in Resources */,
+				2131269B21D035D30067322C /* EventDetails.storyboard in Resources */,
 				21C1342921CE876F0067CE7E /* Poppins-Bold.ttf in Resources */,
 				21C1341A21CE82E50067CE7E /* Events.storyboard in Resources */,
 				21C1342821CE876F0067CE7E /* Poppins-SemiBold.ttf in Resources */,
@@ -414,6 +429,7 @@
 				21C1341C21CE82EE0067CE7E /* EventsViewController.swift in Sources */,
 				21C1344621CEB3010067CE7E /* Events.swift in Sources */,
 				21C1343221CE96270067CE7E /* EventsViewModel.swift in Sources */,
+				2131269921D035A60067322C /* EventDetailsViewController.swift in Sources */,
 				21C1344B21CF96630067CE7E /* EventCell.swift in Sources */,
 				21C1340021CE7A8A0067CE7E /* AppDelegate.swift in Sources */,
 				21545BBF21CFDA6300CC0892 /* UIDevice.swift in Sources */,
