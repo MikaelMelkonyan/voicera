@@ -27,6 +27,7 @@ class EventsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
         viewModel.checkPermissions()
     }
     
@@ -46,6 +47,7 @@ class EventsViewController: UIViewController {
             informationView.isHidden = true
             loader.isHidden = true
             tableView.isHidden = false
+            tableView.reloadData()
         }
     }
     
@@ -79,5 +81,86 @@ class EventsViewController: UIViewController {
                 UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
             }
         }
+    }
+    
+    private func openEventCretaing() {
+        let vc = AppStoryboard.AddEvent.instance.instantiateViewController(withIdentifier: AddEventViewController.storyboardID) as! AddEventViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension EventsViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard case let .success(state) = viewModel.state else {
+            return 0
+        }
+        
+        switch state {
+        case .empty, .error:
+            return 1
+        case let .events(events):
+            return events.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard case let .success(state) = viewModel.state else {
+            return SimpleCell()
+        }
+        
+        switch state {
+        case .empty:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddEventCell", for: indexPath) as! AddEventCell
+            cell.fill { [weak self] in
+                self?.openEventCretaing()
+            }
+            return cell
+        case let .error(text):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ErrorInformationCell", for: indexPath) as! ErrorInformationCell
+            cell.fill(description: text) { [weak self] in
+                self?.viewModel.checkPermissions()
+            }
+            return cell
+        case let .events(events):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
+            // todo
+            return cell
+        }
+    }
+}
+
+// MARK: View building
+extension EventsViewController {
+    
+    private func setupView() {
+        title = "Voicea"
+        setupNavigationBar()
+        setupTableView()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.largeTitleDisplayMode = .always
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        
+        guard let navigationBar = navigationController?.navigationBar else {
+            return
+        }
+        navigationBar.tintColor = .black
+        navigationBar.prefersLargeTitles = true
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+        navigationBar.titleTextAttributes = [.font: UIFont.poppins(size: 17, weight: .medium)]
+        navigationBar.largeTitleTextAttributes = [.font: UIFont.poppins(size: 32, weight: .semiBold)]
+        navigationBar.isTranslucent = true
+    }
+    
+    private func setupTableView() {
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(UINib(nibName: "EventCell", bundle: nil), forCellReuseIdentifier: "EventCell")
+        tableView.register(UINib(nibName: "AddEventCell", bundle: nil), forCellReuseIdentifier: "AddEventCell")
+        tableView.register(UINib(nibName: "ErrorInformationCell", bundle: nil), forCellReuseIdentifier: "ErrorInformationCell")
     }
 }

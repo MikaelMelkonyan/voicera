@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pHC-1c-pxL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U7g-dc-jv3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,10 +27,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPy-pN-sdC">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVj-w6-cUX">
-                                        <rect key="frame" x="24" y="185.5" width="327" height="176"/>
+                                        <rect key="frame" x="24" y="163.5" width="327" height="176"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXw-kN-7fF">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="45"/>
@@ -41,7 +41,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teJ-uV-bL9">
                                                 <rect key="frame" x="0.0" y="65" width="327" height="21"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2p4-61-C8N" customClass="VoiceraButton" customModule="Voicera" customModuleProvider="target">
@@ -78,11 +78,11 @@
                                 </constraints>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="h1P-v3-PTb">
-                                <rect key="frame" x="169" y="300" width="37" height="37"/>
+                                <rect key="frame" x="169" y="322" width="37" height="37"/>
                                 <color key="color" red="0.29019607843137252" green="0.46666666666666667" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FbX-gD-K2J">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FbX-gD-K2J">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -91,9 +91,9 @@
                             <constraint firstItem="FbX-gD-K2J" firstAttribute="top" secondItem="DrR-HB-6Qz" secondAttribute="top" id="6v6-q2-Xqz"/>
                             <constraint firstItem="DrR-HB-6Qz" firstAttribute="bottom" secondItem="sPy-pN-sdC" secondAttribute="bottom" id="D2s-ot-Mcl"/>
                             <constraint firstItem="DrR-HB-6Qz" firstAttribute="trailing" secondItem="sPy-pN-sdC" secondAttribute="trailing" id="Dd8-vm-zfM"/>
-                            <constraint firstItem="DrR-HB-6Qz" firstAttribute="bottom" secondItem="FbX-gD-K2J" secondAttribute="bottom" id="KZq-D5-gbH"/>
                             <constraint firstItem="FbX-gD-K2J" firstAttribute="leading" secondItem="DrR-HB-6Qz" secondAttribute="leading" id="LLO-Ls-cn7"/>
                             <constraint firstItem="DrR-HB-6Qz" firstAttribute="trailing" secondItem="FbX-gD-K2J" secondAttribute="trailing" id="MzR-Yp-9gX"/>
+                            <constraint firstAttribute="bottom" secondItem="FbX-gD-K2J" secondAttribute="bottom" id="ctK-Ix-izG"/>
                             <constraint firstItem="h1P-v3-PTb" firstAttribute="centerY" secondItem="DrR-HB-6Qz" secondAttribute="centerY" constant="-25" id="ea2-IB-I7M"/>
                             <constraint firstItem="sPy-pN-sdC" firstAttribute="leading" secondItem="DrR-HB-6Qz" secondAttribute="leading" id="jSo-DM-pul"/>
                             <constraint firstItem="h1P-v3-PTb" firstAttribute="centerX" secondItem="DrR-HB-6Qz" secondAttribute="centerX" id="kuV-4m-tTE"/>
@@ -101,6 +101,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DrR-HB-6Qz"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RTB-DW-uOY"/>
                     <connections>
                         <outlet property="informationButton" destination="2p4-61-C8N" id="lWi-7L-k6h"/>
                         <outlet property="informationDescription" destination="teJ-uV-bL9" id="STQ-qQ-9bZ"/>
@@ -111,6 +112,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Z1-Bu-stF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="45"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="liP-4Q-XSP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U7g-dc-jv3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yAB-Wt-IsJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pHC-1c-pxL" kind="relationship" relationship="rootViewController" id="q7W-ZH-B1K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghT-mf-a5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-87.200000000000003" y="45.42728635682159"/>
         </scene>

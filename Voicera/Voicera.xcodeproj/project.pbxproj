@@ -25,6 +25,18 @@
 		21C1343E21CE9E4A0067CE7E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343D21CE9E4A0067CE7E /* UIColor.swift */; };
 		21C1344021CEA04B0067CE7E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1343F21CEA04B0067CE7E /* UIView.swift */; };
 		21C1344621CEB3010067CE7E /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1344521CEB3010067CE7E /* Events.swift */; };
+		21C1344B21CF96630067CE7E /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1344921CF96630067CE7E /* EventCell.swift */; };
+		21C1344C21CF96630067CE7E /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C1344A21CF96630067CE7E /* EventCell.xib */; };
+		21C1345021CF96D60067CE7E /* AddEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1344E21CF96D60067CE7E /* AddEventCell.swift */; };
+		21C1345121CF96D60067CE7E /* AddEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C1344F21CF96D60067CE7E /* AddEventCell.xib */; };
+		21C1345521CF99F40067CE7E /* ErrorInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1345321CF99F40067CE7E /* ErrorInformationCell.swift */; };
+		21C1345621CF99F40067CE7E /* ErrorInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C1345421CF99F40067CE7E /* ErrorInformationCell.xib */; };
+		21C1345821CF9C430067CE7E /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1345721CF9C430067CE7E /* SimpleCell.swift */; };
+		21C1345A21CFB0290067CE7E /* PressableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1345921CFB0290067CE7E /* PressableCell.swift */; };
+		21C1345D21CFB5DD0067CE7E /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1345C21CFB5DD0067CE7E /* AddEventViewController.swift */; };
+		21C1345F21CFB6070067CE7E /* AddEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1345E21CFB6070067CE7E /* AddEvent.storyboard */; };
+		21C1346121CFB6640067CE7E /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1346021CFB6640067CE7E /* AppStoryboard.swift */; };
+		21C1346421CFB93B0067CE7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1346321CFB93B0067CE7E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +60,18 @@
 		21C1343D21CE9E4A0067CE7E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		21C1343F21CEA04B0067CE7E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		21C1344521CEB3010067CE7E /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		21C1344921CF96630067CE7E /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		21C1344A21CF96630067CE7E /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		21C1344E21CF96D60067CE7E /* AddEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCell.swift; sourceTree = "<group>"; };
+		21C1344F21CF96D60067CE7E /* AddEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEventCell.xib; sourceTree = "<group>"; };
+		21C1345321CF99F40067CE7E /* ErrorInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInformationCell.swift; sourceTree = "<group>"; };
+		21C1345421CF99F40067CE7E /* ErrorInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorInformationCell.xib; sourceTree = "<group>"; };
+		21C1345721CF9C430067CE7E /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
+		21C1345921CFB0290067CE7E /* PressableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressableCell.swift; sourceTree = "<group>"; };
+		21C1345C21CFB5DD0067CE7E /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		21C1345E21CFB6070067CE7E /* AddEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddEvent.storyboard; sourceTree = "<group>"; };
+		21C1346021CFB6640067CE7E /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		21C1346321CFB93B0067CE7E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				21C1341D21CE83E80067CE7E /* Common */,
+				21C1346221CFB92B0067CE7E /* Defines */,
 				21C1344121CEAF990067CE7E /* Domain */,
 				21C1341521CE80760067CE7E /* Controllers */,
 				21C1343021CE960D0067CE7E /* View models */,
@@ -106,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				21C1341821CE82A00067CE7E /* Events */,
+				21C1345B21CFB5B50067CE7E /* Add event */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,6 +139,7 @@
 		21C1341621CE80880067CE7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				21C1344721CF96420067CE7E /* Cells */,
 				21C1343A21CE9DD40067CE7E /* Buttons */,
 			);
 			path = Views;
@@ -133,6 +160,7 @@
 				21C1343621CE98490067CE7E /* Thread.swift */,
 				21C1343421CE96FB0067CE7E /* EventManager.swift */,
 				21C1342D21CE916F0067CE7E /* Extensions */,
+				21C1346021CFB6640067CE7E /* AppStoryboard.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -207,6 +235,62 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		21C1344721CF96420067CE7E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				21C1345721CF9C430067CE7E /* SimpleCell.swift */,
+				21C1345921CFB0290067CE7E /* PressableCell.swift */,
+				21C1345221CF98130067CE7E /* Error information */,
+				21C1344821CF964C0067CE7E /* Event */,
+				21C1344D21CF96AE0067CE7E /* Add event */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		21C1344821CF964C0067CE7E /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				21C1344921CF96630067CE7E /* EventCell.swift */,
+				21C1344A21CF96630067CE7E /* EventCell.xib */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		21C1344D21CF96AE0067CE7E /* Add event */ = {
+			isa = PBXGroup;
+			children = (
+				21C1344E21CF96D60067CE7E /* AddEventCell.swift */,
+				21C1344F21CF96D60067CE7E /* AddEventCell.xib */,
+			);
+			path = "Add event";
+			sourceTree = "<group>";
+		};
+		21C1345221CF98130067CE7E /* Error information */ = {
+			isa = PBXGroup;
+			children = (
+				21C1345321CF99F40067CE7E /* ErrorInformationCell.swift */,
+				21C1345421CF99F40067CE7E /* ErrorInformationCell.xib */,
+			);
+			path = "Error information";
+			sourceTree = "<group>";
+		};
+		21C1345B21CFB5B50067CE7E /* Add event */ = {
+			isa = PBXGroup;
+			children = (
+				21C1345C21CFB5DD0067CE7E /* AddEventViewController.swift */,
+				21C1345E21CFB6070067CE7E /* AddEvent.storyboard */,
+			);
+			path = "Add event";
+			sourceTree = "<group>";
+		};
+		21C1346221CFB92B0067CE7E /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				21C1346321CFB93B0067CE7E /* Constants.swift */,
+			);
+			path = Defines;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,13 +350,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C1340A21CE7A8C0067CE7E /* LaunchScreen.storyboard in Resources */,
+				21C1345F21CFB6070067CE7E /* AddEvent.storyboard in Resources */,
 				21C1340721CE7A8C0067CE7E /* Assets.xcassets in Resources */,
 				21C1342921CE876F0067CE7E /* Poppins-Bold.ttf in Resources */,
 				21C1341A21CE82E50067CE7E /* Events.storyboard in Resources */,
 				21C1342821CE876F0067CE7E /* Poppins-SemiBold.ttf in Resources */,
 				21C1342621CE876F0067CE7E /* Poppins-Light.ttf in Resources */,
+				21C1345121CF96D60067CE7E /* AddEventCell.xib in Resources */,
 				21C1342721CE876F0067CE7E /* Poppins-Medium.ttf in Resources */,
+				21C1344C21CF96630067CE7E /* EventCell.xib in Resources */,
 				21C1342A21CE876F0067CE7E /* Poppins-Regular.ttf in Resources */,
+				21C1345621CF99F40067CE7E /* ErrorInformationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,16 +371,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C1345021CF96D60067CE7E /* AddEventCell.swift in Sources */,
+				21C1345D21CFB5DD0067CE7E /* AddEventViewController.swift in Sources */,
 				21C1343E21CE9E4A0067CE7E /* UIColor.swift in Sources */,
 				21C1343521CE96FB0067CE7E /* EventManager.swift in Sources */,
+				21C1345821CF9C430067CE7E /* SimpleCell.swift in Sources */,
 				21C1343721CE98490067CE7E /* Thread.swift in Sources */,
+				21C1346121CFB6640067CE7E /* AppStoryboard.swift in Sources */,
 				21C1341C21CE82EE0067CE7E /* EventsViewController.swift in Sources */,
 				21C1344621CEB3010067CE7E /* Events.swift in Sources */,
 				21C1343221CE96270067CE7E /* EventsViewModel.swift in Sources */,
+				21C1344B21CF96630067CE7E /* EventCell.swift in Sources */,
 				21C1340021CE7A8A0067CE7E /* AppDelegate.swift in Sources */,
 				21C1343C21CE9DF70067CE7E /* VoiceraButton.swift in Sources */,
+				21C1345A21CFB0290067CE7E /* PressableCell.swift in Sources */,
 				21C1344021CEA04B0067CE7E /* UIView.swift in Sources */,
 				21C1342F21CE917F0067CE7E /* UIFont.swift in Sources */,
+				21C1345521CF99F40067CE7E /* ErrorInformationCell.swift in Sources */,
+				21C1346421CFB93B0067CE7E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

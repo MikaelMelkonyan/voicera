@@ -6,16 +6,24 @@
 //  Copyright © 2018 Mikael-Melkonyan. All rights reserved.
 //
 
+import EventKit.EKEvent
+
 extension EventsViewModel {
     
     enum State {
         case loading
         case permissionError(PermissionErrorState)
-        case success
+        case success(SuccessState)
         
         enum PermissionErrorState {
             case notDetermined
             case denied
+        }
+        
+        enum SuccessState {
+            case events([EKEvent])
+            case empty
+            case error(String)
         }
     }
 }

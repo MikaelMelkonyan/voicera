@@ -24,4 +24,38 @@ class EventManager {
             completion(isAllowed)
         }
     }
+    
+    func loadEvents() throws -> [EKEvent] {
+        do {
+            let calendar = try getCalendar()
+            
+            let halfYearAgo     = Date(timeIntervalSinceNow: -180 * 24 * 3600)
+            let halfYearAfter   = Date(timeIntervalSinceNow: +180 * 24 * 3600)
+            
+            let predicate = eventStore.predicateForEvents(withStart: halfYearAgo, end: halfYearAfter, calendars: [calendar])
+            let events = eventStore.events(matching: predicate)
+            return events
+        } catch {
+            assertionFailure(error.localizedDescription)
+            throw error
+        }
+    }
+    
+    private func getCalendar() throws -> EKCalendar {
+        if let calendar = eventStore.calendars(for: .event).first(where: { $0.title == "Voicera" }) {
+            return calendar
+        }
+        let calendar = EKCalendar(for: .event, eventStore: eventStore)
+        calendar.title = "Voicera"
+        calendar.source = eventStore.sources.first {
+            $0.sourceType.rawValue == EKSourceType.local.rawValue
+        }
+        do {
+            try eventStore.saveCalendar(calendar, commit: true)
+            return calendar
+        } catch {
+            throw error
+        }
+    }
+    
 }

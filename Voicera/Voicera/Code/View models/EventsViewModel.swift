@@ -53,6 +53,17 @@ extension EventsViewModel {
 extension EventsViewModel {
     
     private func loadEvents() {
-        self.state = .success
+        background {
+            do {
+                let events = try EventManager.shared.loadEvents()
+                if events.isEmpty {
+                    self.state = .success(.empty)
+                } else {
+                    self.state = .success(.events(events))
+                }
+            } catch {
+                self.state = .success(.error(error.localizedDescription))
+            }
+        }
     }
 }

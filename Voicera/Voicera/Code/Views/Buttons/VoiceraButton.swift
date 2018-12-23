@@ -21,6 +21,6 @@ class VoiceraButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         addGradient(colors: (.darkBlue, .blue), isHorizontal: true)
-        crop(radius: 3)
+        crop(radius: kCropRadius)
     }
 }
