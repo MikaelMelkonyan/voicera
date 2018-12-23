@@ -58,4 +58,23 @@ class EventManager {
         }
     }
     
+    func createEvent(with title: String) {
+        let event = EKEvent(eventStore: eventStore)
+        event.title = title
+        
+        event.isAllDay = true
+        
+        event.startDate = Date(timeIntervalSinceNow: -3600)
+        event.endDate = Date(timeIntervalSinceNow: 3600)
+        event.notes = "Mickey Test: notes"
+        event.calendar = try! getCalendar() // todo change
+        
+        do {
+            try eventStore.save(event, span: .thisEvent)
+            // todo
+            print("Success")
+        } catch {
+            print(error.localizedDescription) // todo return error
+        }
+    }
 }

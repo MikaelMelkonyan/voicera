@@ -38,16 +38,25 @@ class EventsViewController: UIViewController {
             informationView.isHidden = true
             loader.isHidden = false
             tableView.isHidden = true
+            navigationItem.setRightBarButton(nil, animated: true)
         case .permissionError:
             informationView.isHidden = false
             loader.isHidden = true
             tableView.isHidden = true
             updateInformation()
-        case .success:
+            navigationItem.setRightBarButton(nil, animated: true)
+        case let .success(state):
             informationView.isHidden = true
             loader.isHidden = true
             tableView.isHidden = false
             tableView.reloadData()
+            let addEvent: UIBarButtonItem?
+            if case .events = state {
+                addEvent = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(openEventCretaing))
+            } else {
+                addEvent = nil
+            }
+            navigationItem.setRightBarButton(addEvent, animated: true)
         }
     }
     
@@ -83,7 +92,7 @@ class EventsViewController: UIViewController {
         }
     }
     
-    private func openEventCretaing() {
+    @objc private func openEventCretaing() {
         let vc = AppStoryboard.AddEvent.instance.instantiateViewController(withIdentifier: AddEventViewController.storyboardID) as! AddEventViewController
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -124,7 +133,7 @@ extension EventsViewController: UITableViewDataSource {
             return cell
         case let .events(events):
             let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
-            // todo
+            cell.fill(event: events[indexPath.row])
             return cell
         }
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit.EKEvent
 
 class EventCell: SimpleCell {
     
@@ -18,5 +19,9 @@ class EventCell: SimpleCell {
         shadowView.crop(radius: kCropRadius)
         shadowView.setShadow(opacity: kShadowsOpacity, color: .black, radius: kShadowsRadius)
         backView.crop(radius: kCropRadius)
+    }
+    
+    func fill(event: EKEvent) {
+        
     }
 }
