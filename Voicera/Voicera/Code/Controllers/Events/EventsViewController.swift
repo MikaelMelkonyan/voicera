@@ -109,6 +109,20 @@ class EventsViewController: UIViewController {
         vc.event = event
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func openEventDetails(by id: String) {
+        guard case let .success(state) = viewModel.state else {
+            return
+        }
+        guard case let .events(events) = state else {
+            return
+        }
+        
+        let event = events.first { $0.event.eventIdentifier == id }?.event
+        if let event = event {
+            openEventDetails(event)
+        }
+    }
 }
 
 extension EventsViewController: EventsView {

@@ -6,14 +6,19 @@
 //  Copyright © 2018 Mikael-Melkonyan. All rights reserved.
 //
 
+import UIKit.UIApplication
 import UserNotifications
 
-class NotificationsManager {
+class NotificationsManager: NSObject {
     
-    private init() {}
+    private override init() {}
     static let shared = NotificationsManager()
     
     private let center = UNUserNotificationCenter.current()
+    
+    func configure() {
+        center.delegate = self
+    }
     
     func getNotificationIds(completion: @escaping (([String]) -> ())) {
         center.getPendingNotificationRequests { requests in
@@ -44,6 +49,7 @@ class NotificationsManager {
                 }
                 
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
+                print(id)
                 let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
                 
                 self.center.add(request) { error in
@@ -72,5 +78,34 @@ class NotificationsManager {
                 }
             }
         }
+    }
+}
+
+// MARK: UNUserNotificationCenterDelegate
+extension NotificationsManager: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        defer {
+            completionHandler()
+        }
+        
+        guard var topController = UIApplication.shared.keyWindow?.rootViewController else {
+            return
+        }
+        while let presentedViewController = topController.presentedViewController {
+            topController = presentedViewController
+        }
+        
+        let nvEvets = topController as? UINavigationController
+        guard let eventList = nvEvets?.topViewController as? EventsViewController else {
+            return
+        }
+        let id = response.notification.request.identifier
+        eventList.openEventDetails(by: id)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("willPresent notification")
+        print(notification.request.identifier)
     }
 }

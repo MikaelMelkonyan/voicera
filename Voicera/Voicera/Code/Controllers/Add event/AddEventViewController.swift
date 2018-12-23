@@ -120,7 +120,7 @@ extension AddEventViewController {
         formatter.dateFormat = "MMM d, yyyy h:mm a"
         var currentDate = Date()
         var hours = currentDate.timeIntervalSince1970 / 3600
-        hours.round()
+        hours.round(.down)
         hours += 1
         hours *= 3600
         currentDate = Date(timeIntervalSince1970: hours)
